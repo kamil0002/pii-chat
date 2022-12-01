@@ -1,20 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Chat App PII</title>
 </head>
+
 <body>
   <div class="wrapper">
-    <div class="nav"></div>
+    <nav class="nav">
+      <div class="nav-mobile">
+        <span class="hamburger-menu"></span>
+        <span class="nav-notification"></span>
+      </div>
+      <div class="nav-heading">
+        <img src="./assets/chat.png" alt="logo" />
+        <h1>messages</h1>
+      </div>
+      <div class="nav-search">
+        <img src="./assets/magnifying-glass.png" alt="search" />
+      </div>
+    </nav>
     <main class="content">
-      <div class="left-panel"></div>
+      <div class="left-panel">
+        <nav>
+          <ul>
+            <li>recent</li>
+            <li>unread</li>
+            <li>groups</li>
+            <li>
+              <img src="./assets/plus.png" alt="plus" />
+            </li>
+          </ul>
+        </nav>
+        <div class="messages">
+          <div class="message-box">
+            <div class="message-box-data">
+              <div class="message-box-person">
+                <img src="./assets/person.jpg" alt="person" />
+                <div>
+                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">Online</span>
+                </div>
+              </div>
+              <div class="message-box-time">3h ago</div>
+            </div>
+
+            <div class="message-box-message">
+              <p>Analysis of foreign experience, as it is commo...</p>
+              <div class="message-box-notification">
+                <span>2</span>
+              </div>
+            </div>
+          </div>
+          <div class="message-box">
+            <span class="message-box-active"></span>
+            <div class="message-box-data">
+              <div class="message-box-person">
+                <img src="./assets/person.jpg" alt="person" />
+                <div>
+                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">Online</span>
+                </div>
+              </div>
+              <div class="message-box-time">14:45 pm</div>
+            </div>
+
+            <div class="message-box-message">
+              <p>Analysis of foreign experience, as it is commo...</p>
+            </div>
+          </div>
+          <div class="message-box">
+            <div class="message-box-data">
+              <div class="message-box-person">
+                <img src="./assets/person.jpg" alt="person" />
+                <div>
+                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">Offline</span>
+                </div>
+              </div>
+              <div class="message-box-time">3h ago</div>
+            </div>
+
+            <div class="message-box-message">
+              <p>Audio Message</p>
+              <div class="message-box-notification">
+                <span>2</span>
+              </div>
+            </div>
+          </div>
+          <div class="message-box">
+            <div class="message-box-data">
+              <div class="message-box-person">
+                <img src="./assets/person.jpg" alt="person" />
+                <div>
+                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">Online</span>
+                </div>
+              </div>
+              <div class="message-box-time">3h ago</div>
+            </div>
+
+            <div class="message-box-message">
+              <p>Analysis of foreign experience, as it is commo...</p>
+            </div>
+          </div>
+          <div class="message-box">
+            <div class="message-box-data">
+              <div class="message-box-person">
+                <img src="./assets/person.jpg" alt="person" />
+                <div>
+                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">Online</span>
+                </div>
+              </div>
+              <div class="message-box-time">18 Apr 2020</div>
+            </div>
+
+            <div class="message-box-message">
+              <p>Analysis of foreign experience, as it is commo...</p>
+              <div class="message-box-notification">
+                <span>1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="right-panel"></div>
     </main>
   </div>
 </body>
+
 </html>

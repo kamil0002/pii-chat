@@ -1,9 +1,9 @@
 :root {
   /* SIZING */
   --container-width: 1460px;
-  --container-height: 68vh;
+  --container-height: 883px;
   --left-panel-width: 400px;
-  --nav-height: 50px;
+  --nav-height: 55px;
   --content-height: calc(var(--container-height) - var(--nav-height));
 
   /* COLORS */
@@ -11,6 +11,9 @@
   --color-primary: 259, 35%, 19%;
   --color-tertiary: 262, 30%, 23%;
   --color-secondary: 255, 35%, 18%;
+  --color-quaternary: 248, 96%, 72%;
+  --color-senary: 271, 25%, 24%;
+  --color-text: 0, 0%, 53%;
 }
 
 *,
@@ -27,25 +30,103 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: hsl(255, 28%, 43%);
   box-sizing: border-box;
-  background: ;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   min-width: 100vw;
+  font-size: 62.5%;
 }
 
 .wrapper {
   width: var(--container-width);
-  background: hsl(var(--color-secondary));
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--color-primary)) 55%,
+    hsl(var(--color-tertiary))
+  );
   height: var(--container-height);
   position: relative;
 }
 
 .nav {
-  background-color: hsl(var(--color-primary));
+  background-color: hsla(var(--color-tertiary), 0.8);
   width: 100%;
   height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+}
+
+.nav-mobile {
+  position: relative;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-notification {
+  position: absolute;
+  width: 12px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  background-color: hsl(var(--color-quaternary));
+  left: -3px;
+  top: 6px;
+}
+
+.hamburger-menu {
+  position: relative;
+  background: hsl(var(--color-text));
+  width: 24px;
+  height: 2px;
+  display: block;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+  content: '';
+  background: hsl(var(--color-text));
+  width: 16px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hamburger-menu::before {
+  top: -8px;
+}
+
+.hamburger-menu::after {
+  bottom: -8px;
+}
+
+.nav-heading {
+  display: flex;
+}
+
+.nav-heading > img[alt='logo'] {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+}
+
+.nav-heading > h1 {
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: hsl(var(--color-text));
+  margin-left: 1rem;
+}
+
+.nav-search > img[alt='search'] {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
 }
 
 .content {
@@ -57,9 +138,189 @@ body {
 
 .left-panel {
   width: var(--left-panel-width);
-  background-color: hsla(var(--color-tertiary), 0.7);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--color-tertiary)) 70%,
+    hsl(var(--color-secondary))
+  );
   height: 100%;
   margin-top: 10px;
+}
+
+.left-panel > nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.left-panel > nav > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  flex: 1;
+  list-style: none;
+  margin-top: 9px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  justify-content: space-around;
+  justify-items: center;
+  font-weight: 700;
+  padding: 0 12px;
+  pointer-events: none;
+}
+
+.left-panel > nav > ul > li {
+  align-self: center;
+  color: hsl(var(--color-text));
+}
+
+.left-panel > nav > ul > li:first-of-type {
+  position: relative;
+  color: hsl(var(--color-quaternary));
+}
+
+.left-panel > nav > ul > li:first-of-type::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -8px;
+  right: -8px;
+  height: 4px;
+  border-radius: 8px 8px 0 0;
+  background-color: hsl(var(--color-quaternary));
+}
+
+.left-panel > nav > ul > li:last-of-type {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    340deg,
+    hsl(var(--color-tertiary)) 3%,
+    hsl(var(--color-senary))
+  );
+  -webkit-box-shadow: 0px 0px 35px -20px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 35px -20px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 35px -20px rgba(255, 255, 255, 1);
+  margin-left: 15px;
+}
+
+.messages {
+  margin-top: 33px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-box {
+  width: 350px;
+  background-image: linear-gradient(
+    to right,
+    hsla(var(--color-senary), 0.7),
+    hsla(var(--color-secondary), 0.2)
+  );
+  height: 110px;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-box-shadow: -5px -1px 24px -16px rgba(180, 181, 193, 1);
+  -moz-box-shadow: -5px -1px 24px -16px rgba(180, 181, 193, 1);
+  box-shadow: -5px -1px 24px -16px rgba(180, 181, 193, 1);
+  position: relative;
+}
+
+.message-box:not(:first-of-type) {
+  margin-top: 38px;
+}
+
+.message-box-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.message-box-person {
+  display: flex;
+}
+
+.message-box-person > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7px;
+}
+
+.message-box-person > div > span {
+  color: hsl(var(--color-text));
+}
+
+.message-box-person > div > span:first-of-type {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.message-box-person > div > span:last-of-type {
+  padding-top: 5px;
+}
+.message-box-person > img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message-box-time {
+  margin-top: -14px;
+  color: hsl(var(--color-text));
+  font-weight: 500;
+  opacity: 0.6;
+  font-size: 0.65rem;
+}
+
+.message-box-message {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 12.5px;
+  font-size: 0.58rem;
+  color: hsl(var(--color-text));
+  font-weight: 700;
+}
+
+.message-box-notification {
+  background: hsl(var(--color-quaternary));
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-box-notification > span {
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.message-box-active {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4.5px;
+  background: hsl(var(--color-quaternary));
+  border-radius: 5px 0 0 5px;
+  box-shadow: 32px 0 37px #7263d9, 3px 3px 37px #9883ff;
 }
 
 .right-panel {
