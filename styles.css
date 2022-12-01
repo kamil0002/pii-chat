@@ -140,11 +140,11 @@ body {
   width: var(--left-panel-width);
   background-image: linear-gradient(
     to bottom,
-    hsl(var(--color-tertiary)) 70%,
-    hsl(var(--color-secondary))
+    hsl(var(--color-secondary)) 70%,
+    hsl(var(--color-tertiary))
   );
   height: 100%;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .left-panel > nav {
@@ -193,8 +193,8 @@ body {
   position: relative;
   display: grid;
   place-items: center;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-image: linear-gradient(
     340deg,
@@ -208,7 +208,7 @@ body {
 }
 
 .messages {
-  margin-top: 33px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -320,7 +320,7 @@ body {
   width: 4.5px;
   background: hsl(var(--color-quaternary));
   border-radius: 5px 0 0 5px;
-  box-shadow: 32px 0 37px #7263d9, 3px 3px 37px #9883ff;
+  box-shadow: 15px 0 37px #7263d9, 3px 3px 37px #9883ff;
 }
 
 .right-panel {
