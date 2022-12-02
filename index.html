@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <title>Chat App PII</title>
 </head>
@@ -41,6 +42,7 @@
           <div class="message-box">
             <div class="message-box-data">
               <div class="message-box-person">
+                <span data-status="active"></span>
                 <img src="./assets/person.jpg" alt="person" />
                 <div>
                   <span class="message-box-person-name">donald johnson</span>
@@ -61,6 +63,7 @@
             <span class="message-box-active"></span>
             <div class="message-box-data">
               <div class="message-box-person">
+                <span data-status="inactive"></span>
                 <img src="./assets/person.jpg" alt="person" />
                 <div>
                   <span class="message-box-person-name">donald johnson</span>
@@ -77,9 +80,10 @@
           <div class="message-box">
             <div class="message-box-data">
               <div class="message-box-person">
+                <span data-status="inactive"></span>
                 <img src="./assets/person.jpg" alt="person" />
                 <div>
-                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">michael chopin</span>
                   <span class="message-box-person-name">Offline</span>
                 </div>
               </div>
@@ -96,9 +100,10 @@
           <div class="message-box">
             <div class="message-box-data">
               <div class="message-box-person">
+                <span data-status="active"></span>
                 <img src="./assets/person.jpg" alt="person" />
                 <div>
-                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">antonio banderas</span>
                   <span class="message-box-person-name">Online</span>
                 </div>
               </div>
@@ -112,9 +117,10 @@
           <div class="message-box">
             <div class="message-box-data">
               <div class="message-box-person">
+                <span data-status="inactive"></span>
                 <img src="./assets/person.jpg" alt="person" />
                 <div>
-                  <span class="message-box-person-name">donald johnson</span>
+                  <span class="message-box-person-name">donald biden</span>
                   <span class="message-box-person-name">Online</span>
                 </div>
               </div>
@@ -130,8 +136,135 @@
           </div>
         </div>
       </div>
-      <div class="right-panel"></div>
-    </main>
+      <div class="right-panel">
+        <div class="content">
+          <div class="interlocutor">
+            <div class="interlocutor-data">
+              <div class="interlocutor-img">
+                <img src="./assets/person.jpg" alt="person" />
+                <span data-status="active"></span>
+              </div>
+              <div class="interlocutor-details">
+                <h4 class="interlocutor-name">gerard hudson</h4>
+                <div class="interlocutor-status">
+                  <span>Online</span>
+                  <span>•</span>
+                  <span>Last seen 3 hours ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="interlocutor-actions">
+              <div class="activity-circle">
+                <img src="./assets/phone.png" alt="phone" />
+              </div>
+              <div class="activity-circle">
+                <img src="./assets/camera.png" alt="video" />
+              </div>
+              <div class="activity-circle">
+                <img src="./assets/dots.png" alt="ellipsis" />
+              </div>
+            </div>
+          </div>
+
+          <span class="separator"></span>
+
+          <div class="messages">
+            <div class="message-box-guest">
+              <svg cache-id="59b2acf760f040a8a393bbec558f2b0f" id="eB5lSfVHaeC1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision">
+                <path
+                  d="M134.888382,119.6085c-25.212961,19.920589-48.998887,20.764683-48.998887,21.608775s53.981391-1.688186,80.230319-17.388312"
+                  transform="translate(.000001 0.000001)" fill="#36294c" stroke="none" stroke-width="0.6" />
+              </svg>
+              <img src="./assets/person.jpg" alt="person" class="collab-img"></img>
+              <p>Hi Alex! What's Up?</p>
+              <span class="message-time">Yesterday 14:26 PM</span>
+            </div>
+
+            <div class="message-box-me">
+              <svg cache-id="59b2acf760f040a8a393bbec558f2b0f" id="eB5lSfVHaeC1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision">
+                <path
+                  d="M134.888382,119.6085c-25.212961,19.920589-48.998887,20.764683-48.998887,21.608775s53.981391-1.688186,80.230319-17.388312"
+                  transform="translate(.000001 0.000001)" fill="#8573fc" stroke="none" stroke-width="0.6" />
+              </svg>
+              <img src="./assets/person.jpg" alt="person" class="collab-img"></img>
+              <p>Ok, Hello. All Perfectly</p>
+              <p>I Work, Study And Know This Wonderful World!</p>
+              <span class="message-time">Yesterday 14:38 PM</span>
+            </div>
+
+            <div class="message-box-guest">
+              <svg cache-id="59b2acf760f040a8a393bbec558f2b0f" id="eB5lSfVHaeC1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision">
+                <path
+                  d="M134.888382,119.6085c-25.212961,19.920589-48.998887,20.764683-48.998887,21.608775s53.981391-1.688186,80.230319-17.388312"
+                  transform="translate(.000001 0.000001)" fill="#36294c" stroke="none" stroke-width="0.6" />
+              </svg>
+              <img src="./assets/person.jpg" alt="person" class="collab-img"></img>
+              <div class="attachment">
+                <div class="activity-circle">
+                  <img src="./assets/play.png" alt="clip" />
+                </div>
+                <img src="./assets/waves.png" alt="music-waves" />
+                <span class="track-time">01:24</span>
+              </div>
+              <span class="message-time">Yesterday 19:26 PM</span>
+            </div>
+
+            <div class="message-box-me">
+              <svg cache-id="59b2acf760f040a8a393bbec558f2b0f" id="eB5lSfVHaeC1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision">
+                <path
+                  d="M134.888382,119.6085c-25.212961,19.920589-48.998887,20.764683-48.998887,21.608775s53.981391-1.688186,80.230319-17.388312"
+                  transform="translate(.000001 0.000001)" fill="#8573fc" stroke="none" stroke-width="0.6" />
+              </svg>
+              <img src="./assets/person.jpg" alt="person" class="collab-img"></img>
+              <p>I Remember Everything Mate. See You Later ✌</p>
+              <span class="message-time">Today 06:18 AM</span>
+            </div>
+
+            <div class="message-box-guest">
+              <svg cache-id="59b2acf760f040a8a393bbec558f2b0f" id="eB5lSfVHaeC1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision">
+                <path
+                  d="M134.888382,119.6085c-25.212961,19.920589-48.998887,20.764683-48.998887,21.608775s53.981391-1.688186,80.230319-17.388312"
+                  transform="translate(.000001 0.000001)" fill="#36294c" stroke="none" stroke-width="0.6" />
+              </svg>
+              <img src="./assets/person.jpg" alt="person" class="collab-img"></img>
+              <div class="attachment">
+                <div class="activity-circle">
+                  <img src="./assets/play.png" alt="clip" />
+                </div>
+                <img src="./assets/waves.png" alt="music-waves" />
+                <span class="track-time">01:24</span>
+              </div>
+              <span class="message-time">Yesterday 19:26 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-bar">
+          <div class="attachment activity-circle">
+            <img src="./assets/attachment.png" alt="attachment" />
+          </div>
+          <input type="text" placeholder="Type a message here..." />
+          <div class="acitivity-bar-acitivities">
+            <div class="activity-circle">
+              <img src="./assets/emoticon.png" alt="emoticon" />
+            </div>
+            <div class="activity-circle">
+              <img src="./assets/send-message.png" alt="send-message" />
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </main>
   </div>
 </body>
 
